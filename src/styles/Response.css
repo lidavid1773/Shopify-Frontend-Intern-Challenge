@@ -1,0 +1,25 @@
+.response-item-container {
+  text-align: left;
+  background-color: #024d40;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  color: white;
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.response-item-component {
+  display: inline-block; /* Does this do anything? */
+  width: 100%;
+}
+
+.label {
+  float: left;
+  width: 10%;
+}
+
+.text {
+  float: right;
+  width: 90%;
+  word-wrap: break-word;
+}
