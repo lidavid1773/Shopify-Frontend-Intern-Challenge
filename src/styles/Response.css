@@ -9,17 +9,17 @@
 }
 
 .response-item-component {
-  display: inline-block; /* Does this do anything? */
+  display: inline-block;
   width: 100%;
 }
 
 .label {
-  float: left;
+  display: inline;
   width: 10%;
 }
 
 .text {
-  float: right;
+  display: inline;
   width: 90%;
   word-wrap: break-word;
 }

@@ -4,7 +4,7 @@ const Response = ({ prompt, response }) => {
   return (
     <div className="response-item-container">
       <div className="response-item-component">
-        <div className="label">Prompt:</div>
+        <div className="label">Prompt: </div>
         <div className="text">{prompt}</div>
       </div>
       <br />
