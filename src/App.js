@@ -1,9 +1,21 @@
 import Form from "./components/Form.js";
+import Response from "./components/Response.js";
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const App = () => {
   const [responses, setResponses] = useState([]);
+
+  useEffect(() => {
+    const data = localStorage.getItem("saved-responses");
+    if (data) {
+      setResponses(JSON.parse(data));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("saved-responses", JSON.stringify(responses));
+  });
 
   return (
     <div className="app-container">
@@ -14,8 +26,13 @@ const App = () => {
 
       <h2>Responses</h2>
       <ul>
-        {responses.map((response, idx) => (
-          <li key={idx}>{response}</li>
+        {responses.map((responseObj, idx) => (
+          <li key={idx}>
+            <Response
+              prompt={responseObj.prompt}
+              response={responseObj.response}
+            />
+          </li>
         ))}
       </ul>
     </div>

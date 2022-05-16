@@ -1,4 +1,3 @@
-import Response from "./Response";
 import "../styles/Form.css";
 import { useState } from "react";
 
@@ -37,7 +36,7 @@ const Form = ({ responses, setResponses }) => {
 
     // Add response to response list (list should be sorted from newest to oldest)
     setResponses([
-      <Response prompt={prompt} response={apiJsonResponse.choices[0].text} />,
+      { prompt: prompt, response: apiJsonResponse.choices[0].text },
       ...responses
     ]);
   };
